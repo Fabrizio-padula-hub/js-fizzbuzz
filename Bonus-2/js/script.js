@@ -15,36 +15,38 @@ for (let i = 1; i <= 100; i++) {
     // Controllare che i numeri siano multipli di 3 'Fizz'
     // Controllare che i numeri siano multipli di 5 'Buzz'
     let multipleOfFizzBuzz
+    let newBoxClass
     if(i % 3 === 0 && i % 5 === 0){
         multipleOfFizzBuzz = 'FizzBuzz';
+        newBoxClass = 'multiple-3-5'
 
     }else if(i % 3 === 0){
         multipleOfFizzBuzz = 'Fizz';
+        newBoxClass = 'multiple-3'
 
     }else if(i % 5 === 0){
         multipleOfFizzBuzz = 'Buzz';
+        newBoxClass = 'multiple-5'
 
     }else{
         multipleOfFizzBuzz = i;
+        newBoxClass = 'only-number'
     }
     console.log(multipleOfFizzBuzz)
 
-    // BONUS 1:
-    // Crea un container nel DOM ,
-    // aggiungendo un elemento html con il numero o la stringa corretta da mostrare.
-    const newBox = `<div>${multipleOfFizzBuzz}</div>`;
-    wrapper.innerHTML += newBox;
+    // const newBox = `<div>${multipleOfFizzBuzz}</div>`;
+    // wrapper.innerHTML += newBox;
+
+
+    // BONUS 2:
+    // Applica stili differenti agli elementi aggiunti al DOM nel 
+    // BONUS 1, a seconda che il valore inserito sia un numero, un fizz, 
+    // un buzz o un fizzbuzz.
+
+        // creazione di un div con classi
+        // appentere il div all'html
+        const newBox = `<div class="${newBoxClass}">${multipleOfFizzBuzz}</div>`;
+        wrapper.innerHTML += newBox;
 
 };
     
-
-
-
-
-
-
-
-
-
-
-// Stampare in console
